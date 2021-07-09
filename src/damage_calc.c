@@ -2470,9 +2470,9 @@ static s32 CalculateBaseDamage(struct DamageCalc* data)
 	//Second Attacker Item Checks
 	switch (data->atkItemEffect) {
 		case ITEM_EFFECT_EXPERT_BELT:
-		//1.2x Boost
+		//1.3x Boost
 			if (data->resultFlags & MOVE_RESULT_SUPER_EFFECTIVE)
-				damage = (damage * 12) / 10;
+				damage = (damage * 13) / 10;
 			break;
 	}
 
@@ -2507,9 +2507,9 @@ static s32 CalculateBaseDamage(struct DamageCalc* data)
 			break;
 
 		case ABILITY_FLUFFY:
-		//2x Boost / 0.5x Decrement
+		//1.75x Boost / 0.5x Decrement
 			if (data->moveType == TYPE_FIRE)
-				damage *= 2;
+				damage *= 1.75;
 
 			if ((useMonAtk && CheckContactByMon(move, data->monAtk))
 			|| (!useMonAtk && CheckContact(move, bankAtk)))
@@ -3144,7 +3144,7 @@ static u16 AdjustBasePower(struct DamageCalc* data, u16 power)
 			break;
 
 		case ABILITY_RIVALRY: ;
-		//1.25x / 0.75x Boost
+		//1.35x / 0.75x Boost
 			u8 attackerGender, targetGender;
 			if (useMonAtk)
 				attackerGender = GetGenderFromSpeciesAndPersonality(data->atkSpecies, data->monAtk->personality);
@@ -3159,22 +3159,22 @@ static u16 AdjustBasePower(struct DamageCalc* data, u16 power)
 			if (attackerGender != 0xFF && targetGender != 0xFF)
 			{
 				if (attackerGender == targetGender)
-					power = (power * 125) / 100;
+					power = (power * 135) / 100;
 				else
 					power = (power * 75) / 100;
 			}
 			break;
 
 		case ABILITY_RECKLESS:
-		//1.2x Boost
+		//1.3x Boost
 			if (CheckTableForMove(move, gRecklessBoostedMoves))
-				power = (power * 12) / 10;
+				power = (power * 13) / 10;
 			break;
 
 		case ABILITY_IRONFIST:
-		//1.2x Boost
+		//1.5x Boost
 			if (CheckTableForMove(move, gPunchingMoves))
-				power = (power * 12) / 10;
+				power = (power * 15) / 10;
 			break;
 
 		case ABILITY_TOXICBOOST:
@@ -3197,9 +3197,9 @@ static u16 AdjustBasePower(struct DamageCalc* data, u16 power)
 			break;
 
 		case ABILITY_SHEERFORCE:
-		//1.3x Boost
+		//1.75x Boost
 			if (CheckTableForMove(move, gSheerForceBoostedMoves))
-				power = (power * 13) / 10;
+				power = (power * 175) / 100;
 			break;
 
 		case ABILITY_AERILATE:
@@ -3317,35 +3317,35 @@ static u16 AdjustBasePower(struct DamageCalc* data, u16 power)
 
 		#ifdef SPECIES_DIALGA
 		case ITEM_EFFECT_ADAMANT_ORB:
-		//1.2x Boost
+		//1.5x Boost
 			if (data->atkSpecies == SPECIES_DIALGA && (data->moveType == TYPE_STEEL || data->moveType == TYPE_DRAGON))
-				power = (power * 12) / 10;
+				power = (power * 15) / 10;
 			break;
 		#endif
 
 		#ifdef SPECIES_PALKIA
 		case ITEM_EFFECT_LUSTROUS_ORB:
-		//1.2x Boost
+		//1.5x Boost
 			if (data->atkSpecies == SPECIES_PALKIA && (data->moveType == TYPE_WATER || data->moveType == TYPE_DRAGON))
-				power = (power * 12) / 10;
+				power = (power * 15) / 10;
 			break;
 		#endif
 
 		#if (defined SPECIES_GIRATINA && defined SPECIES_GIRATINA_ORIGIN)
 		case ITEM_EFFECT_GRISEOUS_ORB:
-		//1.2x Boost
+		//1.3x Boost
 			if ((data->atkSpecies == SPECIES_GIRATINA || data->atkSpecies == SPECIES_GIRATINA_ORIGIN)
 			&& (data->moveType == TYPE_GHOST || data->moveType == TYPE_DRAGON))
-				power = (power * 12) / 10;
+				power = (power * 13) / 10;
 			break;
 		#endif
 
 		#if (!(defined OLD_SOUL_DEW_EFFECT) && defined SPECIES_LATIOS && defined SPECIES_LATIAS)
 		case ITEM_EFFECT_SOUL_DEW:
-		//1.2x Boost
+		//1.3x Boost
 			if ((data->atkSpecies == SPECIES_LATIOS || data->atkSpecies == SPECIES_LATIAS)
 			&& (data->moveType == TYPE_PSYCHIC || data->moveType == TYPE_DRAGON))
-				power = (power * 12) / 10;
+				power = (power * 13) / 10;
 			break;
 		#endif
 
@@ -3372,8 +3372,8 @@ static u16 AdjustBasePower(struct DamageCalc* data, u16 power)
 			break;
 
 		case ITEM_EFFECT_LIFE_ORB:
-			//1.3x Boost
-			power = (power * 13) / 10;
+			//1.5x Boost
+			power = (power * 15) / 10;
 			break;
 	}
 
