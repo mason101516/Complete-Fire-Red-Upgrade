@@ -691,7 +691,8 @@ gPunchingMoves:
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-@Now Boosts Beams and Balls Too OP Maybe
+@Now Boosts Beams, Bombs and Balls Too OP Maybe
+
 gPulseAuraMoves:
 .hword MOVE_AURASPHERE
 .hword MOVE_AURORABEAM
@@ -703,28 +704,39 @@ gPulseAuraMoves:
 .hword MOVE_ELECTROBALL
 .hword MOVE_ENERGYBALL
 .hword MOVE_ETERNABEAM
-@.hword MOVE_G_MAX_FIREBALL_P I dont know if this will work
-@.hword MOVE_G_MAX_FIREBALL_S I dont know if this will work
+.hword MOVE_FIREBLAST
+@.hword MOVE_FLAMETHROWER Decided Not to
 .hword MOVE_FLASHCANNON
 .hword MOVE_FLEURCANNON
+.hword MOVE_FOCUSBLAST
 @.hword MOVE_G_MAX_CANNONADE_S I dont know if this will work
+@.hword MOVE_G_MAX_FIREBALL_P I dont know if this will work
+@.hword MOVE_G_MAX_FIREBALL_S I dont know if this will work
 .hword MOVE_HEALPULSE
-.hword MOVE_HYDROCANNON
+.hword MOVE_HEATWAVE
+.hword MOVE_HYDROCANNON @ Others are wacky, but this one definitely should be boosted
 .hword MOVE_HYPERBEAM
 .hword MOVE_ICEBEAM
 .hword MOVE_METEORBEAM
 .hword MOVE_MISTBALL
 .hword MOVE_MOONGEISTBEAM
+.hword MOVE_MUDBOMB
 .hword MOVE_ORIGINPULSE
 .hword MOVE_POLLENPUFF @ Japanese Pollen Ball
 .hword MOVE_PSYBEAM
+.hword MOVE_PSYWAVE
 .hword MOVE_SHADOWBALL
+.hword MOVE_SHOCKWAVE
 .hword MOVE_SIGNALBEAM
 @.hword MOVE_SIMPLEBEAM Simple Beam Does No Damage.
+.hword MOVE_SLUDGEBOMB
+.hword MOVE_SLUDGEWAVE
 .hword MOVE_SOLARBEAM
 .hword MOVE_SPIKECANNON
 .hword MOVE_STEELBEAM
 .hword MOVE_TERRAINPULSE
+.hword MOVE_THOUSANDWAVES
+.hword MOVE_VACUUMWAVE
 .hword MOVE_WATERPULSE
 .hword MOVE_WEATHERBALL
 .hword MOVE_ZAPCANNON
