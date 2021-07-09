@@ -679,6 +679,7 @@ gPunchingMoves:
 .hword MOVE_FOCUSPUNCH
 .hword MOVE_METEORMASH
 .hword MOVE_SHADOWPUNCH
+.hword MOVE_SUCKERPUNCH @ It wasn't boosted on purpose, but I don't know why
 .hword MOVE_SKYUPPERCUT
 .hword MOVE_HAMMERARM
 .hword MOVE_DRAINPUNCH
