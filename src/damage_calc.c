@@ -2509,7 +2509,7 @@ static s32 CalculateBaseDamage(struct DamageCalc* data)
 		case ABILITY_FLUFFY:
 		//1.75x Boost / 0.5x Decrement
 			if (data->moveType == TYPE_FIRE)
-				damage *= 1.75;
+				damage = (damage * 175) / 100;
 
 			if ((useMonAtk && CheckContactByMon(move, data->monAtk))
 			|| (!useMonAtk && CheckContact(move, bankAtk)))
