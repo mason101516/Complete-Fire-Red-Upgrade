@@ -3372,8 +3372,8 @@ static u16 AdjustBasePower(struct DamageCalc* data, u16 power)
 			break;
 
 		case ITEM_EFFECT_LIFE_ORB:
-			//1.5x Boost
-			power = (power * 15) / 10;
+			//1.4x Boost
+			power = (power * 14) / 10;
 			break;
 	}
 
