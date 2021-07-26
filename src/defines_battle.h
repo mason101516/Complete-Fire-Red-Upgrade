@@ -53,6 +53,7 @@ defines_battle.h
 #define STAT_CAN_FALL(bank, stat) ((gBattleMons[bank].statStages[stat-1] > 0 && ABILITY(bank) != ABILITY_CONTRARY) || (ABILITY(bank) == ABILITY_CONTRARY && gBattleMons[bank].statStages[stat-1] < 12))
 #define BATTLER_ALIVE(bank) (gBattleMons[bank].hp > 0)
 #define BATTLER_MAX_HP(bank) (gBattleMons[bank].hp == gBattleMons[bank].maxHP)
+#define BATTLER_THREE_FOURTH_HP(bank) (gBattleMons[bank].hp >= (3*(gBattleMons[bank].maxHP))/4)
 #define BATTLER_SEMI_INVULNERABLE(bank) (gStatuses3[bank] & STATUS3_SEMI_INVULNERABLE)
 #define IS_Z_MOVE(move) (move >= FIRST_Z_MOVE && move <= LAST_Z_MOVE)
 #define IS_DOUBLE_BATTLE (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
