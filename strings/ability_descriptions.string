@@ -121,7 +121,7 @@ Only damaged by attacks.
 Avoids ball and bomb moves.
 
 #org @DESC_GALEWINGS
-Flying moves hit first.
+When The user has enough health, flying moves hit first.
 
 #org @DESC_MOXIE
 Knockouts boost Attack.
