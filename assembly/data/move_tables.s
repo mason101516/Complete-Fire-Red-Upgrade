@@ -1076,6 +1076,8 @@ gMovesCanUnfreezeTarget:
 
 gMovesThatChangePhysicality:
 .hword MOVE_PHOTONGEYSER
+.hword MOVE_CLANGINGSCALES
+.hword MOVE_CLANGOROUS_SOULBLAZE
 .hword MOVE_LIGHT_THAT_BURNS_THE_SKY
 .hword MOVE_TABLES_TERMIN
 
