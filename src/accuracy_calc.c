@@ -426,12 +426,12 @@ static u32 AccuracyCalcPassDefAbilityItemEffect(u16 move, u8 bankAtk, u8 bankDef
 
 	switch (atkAbility) {
 		case ABILITY_COMPOUNDEYES:
-			calc = udivsi((calc * 130), 100); // 1.3 Compound Eyes boost
+			calc = udivsi((calc * 150), 100); // 1.5 Compound Eyes boost
 			break;
 
 		case ABILITY_HUSTLE:
 			if (moveSplit == SPLIT_PHYSICAL)
-				calc = udivsi((calc * 80), 100); // 0.8 Hustle loss;
+				calc = udivsi((calc * 90), 100); // 0.9 Hustle loss;
 			break;
 
 		case ABILITY_VICTORYSTAR:
@@ -528,12 +528,12 @@ u32 VisualAccuracyCalc_NoTarget(u16 move, u8 bankAtk)
 
 	switch (atkAbility) {
 		case ABILITY_COMPOUNDEYES:
-			calc = udivsi((calc * 130), 100); // 1.3 Compound Eyes boost
+			calc = udivsi((calc * 150), 100); // 1.5 Compound Eyes boost
 			break;
 
 		case ABILITY_HUSTLE:
 			if (moveSplit == SPLIT_PHYSICAL)
-				calc = udivsi((calc * 80), 100); // 0.8 Hustle loss;
+				calc = udivsi((calc * 90), 100); // 0.9 Hustle loss;
 			break;
 
 		case ABILITY_VICTORYSTAR:
