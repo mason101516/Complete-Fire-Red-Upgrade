@@ -1654,7 +1654,7 @@ s8 PriorityCalc(u8 bank, u8 action, u16 move)
 				if (GetMoveTypeSpecial(bank, move) == TYPE_FLYING)
 				{
 					#ifndef OLD_GALE_WINGS
-						if (BATTLER_MAX_HP(bank))
+						if (BATTLER_THREE_FOURTH_HP(bank))
 					#endif
 							++priority;
 				}
