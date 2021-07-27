@@ -7887,11 +7887,7 @@ const struct BattleMove gBattleMoves[] =
 		.effect = EFFECT_SLEEP,
 		.power = 0,
 		.type = TYPE_DARK,
-		#ifdef DARK_VOID_ACC_NERF
-		.accuracy = 50,
-		#else
 		.accuracy = 80,
-		#endif
 		.pp = 10,
 		.secondaryEffectChance = 100,
 		.target = MOVE_TARGET_BOTH,
