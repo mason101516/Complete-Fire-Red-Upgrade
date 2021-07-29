@@ -692,7 +692,7 @@ The user swings its\nbody around violently\nto inflict damage on\neverything in 
 The user burns\nitself out. After\nusing this move,\nthe user will no\nlonger be Fire type.
 
 #org @DESC_CLANGINGSCALES
-The user rubs its\nscales and makes a\nhuge noise to\nattack. The user's\nDef stat goes down.
+The user rubs its\nscales and attacks\nusing the higher\nattack stat. The\nuser's Def stat\ngoes down.
 
 #org @DESC_DARKESTLARIAT
 The user swings both\narms and hits the\ntarget. The target's\nstat changes are\nignored.
