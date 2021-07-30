@@ -1872,6 +1872,12 @@ u32 SpeedCalcMon(u8 side, struct Pokemon* mon)
 		case ABILITY_SLOWSTART:
 			speed /= 2;
 			break;
+		case ABILITY_LIGHTMETAL:
+			speed = (speed * 3) / 2;
+			break;
+		case ABILITY_HEAVYMETAL:
+			speed = (speed * 2) / 3;
+			break;
 		case ABILITY_SURGESURFER:
 			if (gTerrainType == ELECTRIC_TERRAIN)
 				speed *= 2;
